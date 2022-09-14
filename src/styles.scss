@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    color: white;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(to right top, #282d4e, #2b3b5f, #2c4970, #2c5880, #2a6890, #2679a0, #228ab0, #1e9cbe, #1fb3cf, #2ccbdd, #43e3e8, #5ffbf1);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+a {
+    color: #2ccdcd;
+    text-decoration: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-content {
+    animation: fadeIn 0.25s ease-out;
+}

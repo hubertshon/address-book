@@ -1,0 +1,65 @@
+<div class="container-lg align-items-center">
+    <div class="card d-flex">
+        <div class="align-self-center card-content">
+
+            <div 
+                class="row mb-4 back-button" 
+                (click)="navigateBack()" 
+                *ngIf="currentWindowWidth > 767.98"
+                >
+                <span style="letter-spacing: 0.2em"><i class="fa fa-arrow-left"></i> BACK</span>
+            </div>
+
+            <div class="row my-4 align-items-center flex-nowrap">
+                <div class="avatar col-auto justify-content-left">
+                    <img src="{{ contact.picture.medium }}" />
+                </div>
+                <div class="col-8 text-break">
+                    <h1>{{ contact.name.first }} {{ contact.name.last }}</h1>
+                </div>
+            </div>
+            <div class="row mb-4 justify-content-left">
+                <div class="d-flex col-12">
+                    <div style="width: 1rem;">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <a [href]="'mailto:' + contact.email" style="margin-left: 1rem;">{{ contact.email }}</a>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="d-flex col-12 justify-content-left">
+                    <div style="width: 1rem;">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <span style="margin-left: 1rem;"><strong>Phone:</strong> {{ contact.phone }}</span>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="d-flex col-12 justify-content-left">
+                    <div style="width: 1rem;">
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+                    <span style="margin-left: 1rem;">{{ contact.location.city }}, {{ contact.location.country }}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="d-flex col-12 justify-content-left">
+                    <div style="width: 1rem;">
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                    <span style="margin-left: 1rem;">{{ contact.dob.date | date:'MMMM d, y' }}</span>
+                </div>
+            </div>
+
+            <div 
+                class="d-flex row back-button justify-content-center" 
+                (click)="navigateBack()" 
+                *ngIf="currentWindowWidth <= 767.98" 
+                style="height: 4rem;"
+                >
+                <span class="align-self-end text-center" style="letter-spacing: 0.2em"><i class="fa fa-arrow-left"></i> BACK</span>
+            </div>
+        </div>
+    </div>
+</div>
+

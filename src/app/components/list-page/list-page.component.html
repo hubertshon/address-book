@@ -1,0 +1,71 @@
+<div class="container-lg justify-content-center">
+    <div class="d-flex list align-self-center flex-column">
+        <!-- HEADER -->
+        <div class="d-flex header mb-4 justify-content-between">
+            <h3 class="fw-light" style="letter-spacing: 0.2em; color: #f4d35e;">CONTACTS</h3>
+            <div>
+                <!-- PAGE BUTTONS -->
+                <div class="pageButtons d-inline-block mr-2" *ngIf="collectedContacts.length > 10">
+                    <button class="btn backPage-btn" (click)="paginate(false)" [disabled]="pageNumber <= 1">
+                        <i class="fa fa-angle-left fw-light"></i>
+                    </button>
+                    <a>{{ pageNumber }}</a>
+                    <button class="btn forwardPage-btn" (click)="paginate(true)" [disabled]="pageNumber >= maxPageNumber">
+                        <i class="fa fa-angle-right"></i>
+                    </button>
+                </div>
+
+
+                <button 
+                    class="btn refresh-btn align-items-center" 
+                    (click)="getContacts()"
+                    aria-label="refresh"
+                    >
+                    <i class="fa fa-refresh" style="margin-right: 1rem;"></i>
+                    <span style="letter-spacing: 0.2em;">REFRESH</span>
+                </button>
+            </div>
+        </div>
+        <!-- ROW -->
+        <div class="list-container" #listContainer>
+            <div 
+                *ngFor="let contact of contacts, let i = index" 
+                [id]="i"
+                class="d-flex row contact-row align-items-center justify-content-left" 
+                (click)="selectContact(contact)"
+                >
+                <!-- Thumbnail -->
+                <div class="col-auto pe-none">
+                    <div class="avatar">
+                        <img src="{{ contact.picture.thumbnail }}" />
+                    </div>
+                </div>
+                <!-- Name -->
+                <div class="col-6 pe-none">
+                    <span class="text fw-bold">{{ contact.name.first }}  {{ contact.name.last }}</span> 
+                </div>
+                <!-- Phone -->
+                <div class="col-4 pe-none" *ngIf="!(currentWindowWidth <= 767.98)">
+                    <span>{{ contact.phone }}</span> 
+                </div>
+            </div>
+        </div>
+
+        <!-- LOADING INDICATOR -->
+        <div 
+            *ngIf="loading" 
+            class="d-flex align-items-center justify-content-center" 
+            style="height: 15rem;"
+            >
+            <i class="fa fa-spinner fa-2x fa-spin"></i>
+        </div>
+
+        <!-- ERROR MESSAGE -->
+        <div *ngIf="errorStatus" class="d-flex justify-content-center mt-2">
+            <h5>Sorry, an error has occured. Please refresh the page</h5>
+        </div>
+
+    </div>
+</div>
+
+
