@@ -1,14 +1,11 @@
 # NuvalenceAddressBook
 
+Hello, I'm Hubert. Thank you for checking out my app! 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.13.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
@@ -24,7 +21,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Approach
 
-When considering the use case for this app, I assumed that most users would be using the app to navigate through their stored contacts, rather than expecting a constantly refreshing list of contacts. With this assumption the app was built to smooth such an experience in the following ways.
+When considering the use case for this app, I assumed that most users would be using the app to navigate through their stored contacts, rather than expecting a constantly refreshing list of contacts. With this assumption the app was built to smooth out this experience in the following ways.
 
   
 ### Reduced Number of Requests
@@ -73,6 +70,11 @@ Tab focusing throughout the application
 Ensuring that screen readers can read the contacts data 
 
 Estimated time to Complete: 0.5 day
+
+### Testing
+Although some work has been done, I would have liked to include more extensive unit tests. 
+
+Estimated Time to Complete: 1 day
 
 
 
