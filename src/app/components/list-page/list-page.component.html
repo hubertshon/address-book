@@ -1,28 +1,34 @@
 <div class="container-lg justify-content-center">
     <div class="d-flex list align-self-center flex-column">
         <!-- HEADER -->
-        <div class="d-flex header mb-4 justify-content-between">
+        <div class="d-flex mb-4 align-items-center justify-content-between">
             <h3 class="fw-light" style="letter-spacing: 0.2em; color: #f4d35e;">CONTACTS</h3>
             <div>
                 <!-- PAGE BUTTONS -->
-                <div class="pageButtons d-inline-block mr-2" *ngIf="collectedContacts.length > 10">
-                    <button class="btn backPage-btn" (click)="paginate(false)" [disabled]="pageNumber <= 1">
+                <div class="pageButtons d-inline-block" *ngIf="collectedContacts.length > 10 && currentWindowWidth > 767.98" >
+                    <button 
+                        class="btn backPage-btn" 
+                        (click)="paginate(false)" 
+                        [disabled]="pageNumber <= 1"
+                        >
                         <i class="fa fa-angle-left fw-light"></i>
                     </button>
                     <a>{{ pageNumber }}</a>
-                    <button class="btn forwardPage-btn" (click)="paginate(true)" [disabled]="pageNumber >= maxPageNumber">
+                    <button 
+                        class="btn forwardPage-btn" 
+                        (click)="paginate(true)" 
+                        [disabled]="pageNumber >= maxPageNumber"
+                        >
                         <i class="fa fa-angle-right"></i>
                     </button>
                 </div>
-
-
                 <button 
-                    class="btn refresh-btn align-items-center" 
+                    class="btn refresh-btn align-items-center mb-1" 
                     (click)="getContacts()"
                     aria-label="refresh"
                     >
-                    <i class="fa fa-refresh" style="margin-right: 1rem;"></i>
-                    <span style="letter-spacing: 0.2em;">REFRESH</span>
+                    <i class="fa fa-refresh"></i>
+                    <span style="letter-spacing: 0.2em; margin-left: 1rem;" *ngIf="currentWindowWidth > 767.98">REFRESH</span>
                 </button>
             </div>
         </div>
@@ -65,6 +71,24 @@
             <h5>Sorry, an error has occured. Please refresh the page</h5>
         </div>
 
+
+        <div class="d-flex align-items-center justify-content-center" *ngIf="collectedContacts.length > 10 && currentWindowWidth < 767.98" >
+            <button 
+                class="btn backPage-btn" 
+                (click)="paginate(false)" 
+                [disabled]="pageNumber <= 1"
+                >
+                <i class="fa fa-angle-left fw-light"></i>
+            </button>
+            <span class="mx-1">{{ pageNumber }}</span>
+            <button 
+                class="btn forwardPage-btn" 
+                (click)="paginate(true)" 
+                [disabled]="pageNumber >= maxPageNumber"
+                >
+                <i class="fa fa-angle-right"></i>
+            </button>
+        </div>
     </div>
 </div>
 

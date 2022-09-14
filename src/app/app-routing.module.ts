@@ -8,7 +8,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 const routes: Routes = [
 
   {
-    path: 'home-page',
+    path: 'app',
     component: HomePageComponent,
     data: { title: 'Home Page'},
     children: [
@@ -26,7 +26,7 @@ const routes: Routes = [
   },
 
 
-  { path: '**', redirectTo: 'home-page/list-page', pathMatch: 'full' },
+  { path: '**', redirectTo: 'app/list-page', pathMatch: 'full' },
 ];
 
 @NgModule({

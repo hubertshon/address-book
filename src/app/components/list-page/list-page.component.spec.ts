@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AddressBookService } from 'src/app/address-book.service';
+import { AddressBookService } from 'src/app/services/address-book.service';
 import { ListPageComponent } from './list-page.component';
 import { of } from 'rxjs';
 
@@ -12,7 +12,6 @@ describe('ListPageComponent', () => {
 
 
   beforeEach(async(() => {
-    // addressBookServiceSpy.getContacts.and.returnValue(of(ContactResponse))
 
     TestBed.configureTestingModule({
       declarations: [ ListPageComponent ],

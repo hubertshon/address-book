@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Contact } from '../models/contact';
-import { ContactResponse } from '../models/contact_response';
 
 
 @Injectable({

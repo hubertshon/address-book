@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener, ElementRef, ViewChild } from '@angular/core';
-import { AddressBookService } from 'src/app/address-book.service';
+import { AddressBookService } from 'src/app/services/address-book.service';
 import { NavigationService } from 'src/app/services/navigation.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Contact } from 'src/app/models/contact';
