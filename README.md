@@ -37,7 +37,6 @@ Currently the app is making a request of 50 contacts. The list will display ten 
 
 Seeing the that 70% of the users were on mobile, the app was made to ensure responsiveness, primarily using Bootstrap. A number of other considerations came into play: 
 
-* Upon reaching narrower breakpoints, the contact list's number column will be removed.
 * On the Details Page, the back button is moved closer to the thumb position to provide easier access.
 * In the List Page, 
 	* The page buttons are moved to the bottom. This provides easier thumb access, and far reduces the possibility of mis-clicking the refresh button.
@@ -49,32 +48,35 @@ Seeing the that 70% of the users were on mobile, the app was made to ensure resp
 ### Searching, Filtering, Sorting
 
 The biggest ommission from this first of the app is the absence of filtering, sorting, and search features. I normally consider these a staple in applications like this, but ran into a number of questions. 
-1) Are we assuming that the initial request retrieving every contact from the database?
-2) If not, how are we to handle the logic to retrieve more contacts from the DB? 
+- Are we assuming that the initial request is retrieving all of the user's contacts from the database?
+- If not, how are we to handle the process of retrieving more contacts from the DB? 
 
-Because of these uncertainties, and because the spec sheet did not request them, searching, filtering, and sorting were omitted for this time. 
+Because of these uncertainties, the decision was made to keep this version closer to what was specified in the instructions. Searching, filtering, and sorting were omitted for this time. 
 
-Estimated time to Complete: 1 day
+**Estimated time to Complete: 1 day**
 
 ### UI Streamlining
 
 To further the experience for mobile users, I would have implemented an accordion style interface to the list. This would have reduced the number of 'clicks' needed to navigate through the contact list and may have been a more enjoyable experience. 
 
-Estimated time to Complete: 0.5 day
+**Estimated time to Complete: 0.5 day**
 
 
 
 ### Accessibility Improvements
 
-Tab focusing throughout the application
-Ensuring that screen readers can read the contacts data 
+Starting to grow in the accessibility area. But I have garnered multiple insights including: 
+- Ensuring important pieces of information are tab focusable
+- Descriptive HTML, including aria-labels, alt tags, and titles.
+- Enable keypresses to work with pagination
+
 
 Estimated time to Complete: 0.5 day
 
 ### Testing
 Although some work has been done, I would have liked to include more extensive unit tests. 
 
-Estimated Time to Complete: 1 day
+**Estimated Time to Complete: 1 day**
 
 
 
