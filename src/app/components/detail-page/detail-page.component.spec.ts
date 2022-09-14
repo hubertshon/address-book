@@ -60,7 +60,4 @@ describe('DetailPageComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it("testing title"), () => {
-  //   expect(component.contact).toBe(Contact)
-  // }
 });

@@ -57,16 +57,24 @@ The biggest ommission from this first of the app is the absence of filtering, so
 
 Because of these uncertainties, and because the spec sheet did not request them, searching, filtering, and sorting were omitted for this time. 
 
+Estimated time to Complete: 1 day
+
 ### UI Streamlining
 
 To further the experience for mobile users, I would have implemented an accordion style interface to the list. This would have reduced the number of 'clicks' needed to navigate through the contact list and may have been a more enjoyable experience. 
+
+Estimated time to Complete: 0.5 day
+
 
 
 ### Accessibility Improvements
 
 Tab focusing throughout the application
 Ensuring that screen readers can read the contacts data 
- 
+
+Estimated time to Complete: 0.5 day
+
+
 
 
 
